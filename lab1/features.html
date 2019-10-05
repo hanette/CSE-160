@@ -1,0 +1,37 @@
+<!-- features.html -->
+<body>
+<h1>Hanette Le</h1>
+<h2>CSE 16: Lab 1<br>hanle<br>10/5/19</h2>
+<h3>Description:</h3>
+<p>This WebGL program allows user to create blue squares and red circles with their mouse. When user left clicks inside the canvas, a red circle (with side lengths of 10) is drawn centered at the mouse position. When user right clicks inside the canvas, a blue square (with radius of 10) is drawn centered at the mouse position. The coordinates of every mouse click will be printed in the console. If two shapes are drawn at the same coordinates, the newest shape will overlap the old shape.  If a circle is drawn then a square, the square will be on top and parts of the circle will be displayed. If a square is drawn then a circle, the circle (since circles are bigger) will cover the entire square.</p>
+<h3>My implementation:</h3>
+<p>
+    → I added conditions to read left and right mouse clicks through ev.button<br>
+    → Created a "g_color" array to save the order of colors created.<br>
+    → Set a "z variable" to determine which shape is which. (z = 0 means left click & z = 1 means right click)<br>
+    → Created a "g_points" array to save all click position along with z in order. (g.point[x,y,z])<br>
+    → Created a for loop to iterate through all points and draw circle or square depending on variable "z"<br>
+    → Created a initVertexBuffers_square function where it takes in the x & y coordinate and create the square vertices. It also initialize the buffer.<br>
+    → Created a initVertexBuffers_circle function where it takes in the x & y coordinate and create the circle vertices using the unit circle concept. It also initialize the buffer.
+
+</p>
+<h3>Not implementation:</h3>
+<p>
+    → I used javascript library (webgl-utils, webgl-debug, cuon-utils)<br>
+    → Referenced w3schools' HTML Event Attributes for mouse events attributes. <br>
+    → Used and reference code from <i>WebGL Programming Guide</i>'s Chapter 2 and Chapter 3 including:<br>
+    —→ HelloCanvas (Retrieve canvas element)<br>
+    —→ HelloPoint1 & HelloPoint2 (Setting up shader and attribute variable)<br>
+    —→ ClickedPoints (Recognize mouse clicks on canvas)<br>
+    —→ ColoredPoints (Change color of shapes)<br>
+    —→ HelloTriangle (Learning to use triangles to make a circle)<br>
+    —→ DrawRectangle (Learning to use trangles to make a square)<br>
+</p>
+<h3>Special features:</h3>
+<p>Even though it was not stated, I added a border around the canvas to make it easier to see where the ends and size of the canvas.</p>
+<h3>User-Guide (optional):</h3>
+<p>Click inside canvas with your left and right mouse button to make red circles (left click) and blue squares (right click)!</p>
+<h3><a href="driver.html">LINK to DRIVER.HTML</a></h3>
+
+<br><br>
+</body>
