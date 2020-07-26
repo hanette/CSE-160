@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title> ASG1: Hanette Le</title>
+</head>
+
+<body onload="main()">
+   <!-- Create a canvas (400x400) Note: size and origin -->
+   <canvas id="asg1" width="400" height="400" style="border:1px solid #000000;">
+      Please use a browser that supports "canvas"
+   </canvas>
+
+   <br>
+   <!-- Clear Canvas -->
+   <button type="button" id ="clear">Clear Canvas</button>
+   <br><br>
+   <!-- Drawing Mode -->
+   <label for="v1">Drawing Mode:</label>
+   <button type="button" id ="square">Squares</button>
+   <button type="button" id ="triangle">Triangles</button>
+   <button type="button" id ="circle">Circles</button>
+   <br>
+   <label for="v1">Bonus Drawing Mode:</label>
+   <button type="button" id ="hourglass">Square Outline</button>
+   <button type="button" id ="otriangle">Triangle Outline</button>
+   <button type="button" id ="ocircle">Circle Outline</button>
+   <button type="button" id ="flower">Flower</button>
+   <button type="button" id ="oflower">Flower Outline</button>
+   <br><br>
+   <!-- Shape Color -->
+   <label for="red">Red</label>
+   <input type="range" id="red" name="red" min="0" max="10" class = "slider">
+   <label for="green">Green</label>
+   <input type="range" id="green" name="green" min="0" max="10" class = "slider">
+   <label for="blue">Blue</label>
+   <input type="range" id="blue" name="blue" min="0" max="10" class = "slider">
+   <br><br>
+   <!-- Shape & Size -->
+   <label for="size">Shape Size: </label>
+   <input type="range" id="size" name="size" min="1" max="10" class = "slider">
+   <label for="sCount">(Circle) Segment Count: </label>
+   <input type="range" id="sCount" name="sCount" min="1.5" max="12" value="12" class = "slider">
+   <br><br>
+   <p>Note: Added extra types of brushes to make the canvas more fun!<br>There is a bonus outline brush of square, triangle, circle, and a new shape of a flower and its outline!</p>
+
+   <!-- javascript files containing functions for WebGL -->
+   <script src="lib/webgl-utils.js"></script>
+   <script src="lib/webgl-debug.js"></script>
+   <script src="lib/cuon-utils.js"></script>
+   <script src="lib/cuon-matrix-cse160.js"></script>
+
+   <!-- Add our asg js file -->
+   <script type=text/javascript src="Triangle.js"></script>
+   <script type=text/javascript src="Point.js"></script>
+   <script type=text/javascript src="Circle.js"></script>
+   <script type=text/javascript src="Flower.js"></script>
+   <script type=text/javascript src="asg1.js"></script>
+
+</body>
+</html>
