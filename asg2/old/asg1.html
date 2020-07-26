@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title> ASG1: Hanette Le</title>
+</head>
+
+<body onload="main()">
+   <!-- Create a canvas (400x400) Note: size and origin -->
+   <canvas id="asg1" width="400" height="400" style="border:1px solid #000000;">
+      Please use a browser that supports "canvas"
+   </canvas>
+
+   <br><br>
+   <!-- Camera and Joint -->
+   <label for="camera">Camera Angle:</label>
+   <input type="range" id="camera" name="camera" min="0" max="360" value="0" class = "slider"><br>
+   <label for="joint">Joint 1</label>
+   <input type="range" id="joint" name="joint" min="0" max="45" value="0" class = "slider">
+   <label for="joint">Joint 2</label>
+   <input type="range" id="joint2" name="joint2" min="0" max="45" value="0" class = "slider"><br>
+   <label for="animate_on">Animation: </label>
+   <button type="button" id="animate_on">ON</button>
+   <button type="button" id="animate_off">OFF</button><br>
+   <p>Note: This is a penguin.</p>
+
+   <!-- javascript files containing functions for WebGL -->
+   <script src="lib/webgl-utils.js"></script>
+   <script src="lib/webgl-debug.js"></script>
+   <script src="lib/cuon-utils.js"></script>
+   <script src="lib/cuon-matrix.js"></script>
+
+   <!-- Add our asg js file -->
+   <script type=text/javascript src="Triangle.js"></script>
+   <script type=text/javascript src="Point.js"></script>
+   <script type=text/javascript src="Circle.js"></script>
+   <script type=text/javascript src="Cube.js"></script>
+   <script type=text/javascript src="asg1.js"></script>
+   <script type=text/javascript src="drawAllShapes.js"></script>
+
+</body>
+</html>
